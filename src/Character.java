@@ -4,10 +4,7 @@ public abstract class Character implements Creature {
     public Character(String name, int hp) {}
     public abstract void attack(Character target);
     public final boolean isAlive(){
-        if(hp > 0) {
-            return true;
-        }
-        return false;
+        return this.hp>0;
     }
     public void showStatus(){
         System.out.println(name+":HP "+hp);
